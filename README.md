@@ -69,11 +69,13 @@ public abstract class Duck {
 ```
 
 ```java
-   public static void main(String[] args) {
+public class Test {
+    public static void main(String[] args) {
         Duck muteDuck = new MuteDuck();
         muteDuck.setFlyBehaviour(new FlyWithWings());
         muteDuck.setQuackBehaviour(new Quack());
         muteDuck.performFly();
         muteDuck.performQuack();
     }
+}
 ```

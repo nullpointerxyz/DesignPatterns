@@ -21,19 +21,36 @@ public abstract class Duck {
      */
     public abstract void display();
 
-    public void performFly() {
-        flyBehaviour.fly();
-    }
 
-    public void performQuack() {
-        quackBehaviour.quack();
-    }
-
+    /**
+     * 动态绑定叫行为
+     *
+     * @param quackBehaviour
+     */
     public void setQuackBehaviour(QuackBehaviour quackBehaviour) {
         this.quackBehaviour = quackBehaviour;
     }
 
+    /**
+     * 动态绑定飞行为
+     *
+     * @param flyBehaviour
+     */
     public void setFlyBehaviour(FlyBehaviour flyBehaviour) {
         this.flyBehaviour = flyBehaviour;
+    }
+
+    /**
+     * 通用飞行为
+     */
+    public void performFly() {
+        flyBehaviour.fly();
+    }
+
+    /**
+     * 通用叫行为
+     */
+    public void performQuack() {
+        quackBehaviour.quack();
     }
 }

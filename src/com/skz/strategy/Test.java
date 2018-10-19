@@ -6,7 +6,7 @@ package com.skz.strategy;
  **/
 public class Test {
     public static void main(String[] args) {
-        MuteDuck muteDuck = new MuteDuck();
+        Duck muteDuck = new MuteDuck();
         muteDuck.setFlyBehaviour(new FlyWithWings());
         muteDuck.setQuackBehaviour(new Quack());
         muteDuck.performFly();
